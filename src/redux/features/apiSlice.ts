@@ -26,7 +26,18 @@ export const productApi = createApi({
         },
       }),
     }),
+    getYears: builder.query({
+      query: () => ({
+        url: "years",
+        headers: {
+          "X-RapidAPI-Key":
+            "777bdfc980mshae3efd6fe82fe27p11d361jsn0e4afdb18bd7",
+          "X-RapidAPI-Host": "car-api2.p.rapidapi.com",
+        },
+      }),
+    }),
   }),
 });
 
-export const { useGetVehiclesQuery, useGetModelsQuery } = productApi;
+export const { useGetVehiclesQuery, useGetModelsQuery, useGetYearsQuery } =
+  productApi;

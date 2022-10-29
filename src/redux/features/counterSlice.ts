@@ -13,7 +13,7 @@ export const makeSlice = createSlice({
   name: "make",
   initialState,
   reducers: {
-    makeToStore: (state, action: PayloadAction<number>) => {
+    makeToStore: (state, action: PayloadAction<string>) => {
       state.value = action.payload;
     },
   },

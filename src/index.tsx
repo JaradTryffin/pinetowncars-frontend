@@ -4,8 +4,6 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
-import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
-import { productApi } from "./redux/features/apiSlice";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./services/Routes";
 
@@ -15,9 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ApiProvider api={productApi}>
-        <RouterProvider router={router} />
-      </ApiProvider>
+      <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
 );
